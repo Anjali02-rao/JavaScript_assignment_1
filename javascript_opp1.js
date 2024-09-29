@@ -28,20 +28,21 @@ You can choose what the actual content is.
 Try to use both the let and const keywords
 ******************************************************************************/
 
-const userName = "Anjali"
-let userAge = 30
-let userIsLoggedIn = true
-let userInterests = ["Painting, Hiking, Cycling"]
-console.log(userInterests[0])
+const Name = "Anjali"
+let Age = 30
+let userHasId = true
+let userHobbies = ["Painting", "Hiking", "Cycling"]
+console.log(userHobbies)
+console.log(userHobbies[2])
 
 const userData = {
-userName: "Anjali",
-userAge: 30,
-userIsLoggedIn: true,
-userInterests: ["Painting", "Hiking", "Cycling"],   
+Name: "Anjali",
+Age: 30,
+userHasId: true,
+userHobbies: ["Painting", "Hiking", "Cycling"],   
 };
-console.log(userData.userIsLoggedIn, userInterests)
-console.log(userAge,userName)
+console.log(userData.userHasId, userHobbies)
+console.log(Age,Name)
 
 /****************************************************************************** 
 ASSIGNMENT 3
@@ -87,14 +88,26 @@ Try changing the values of the variables to make sure your IF/ELSE conditional
 can handle all cases correctly 
 ******************************************************************************/
 
-// let userName = "";
-// let userAge = 18;
-// let userIsLoggedIn = false;
-// let userIsBlocked = false;
-// let goToPage = "";
-// console.log(userAge)
 
-//your code here
+
+let userName = "";
+let userAge = 18;
+let userIsLoggedIn = false;
+let userIsBlocked = false;
+let goToPage = "";
+console.log(userAge)
+
+if (userName === " " && userAge >= 18 && userIsBlocked === false) {
+    userIsLoggedIn = true
+    goToPage = "/home"
+console.log("Access is granted.");
+    
+} else {
+    
+    console.log("Access is denied.");
+}
+    console.log(userIsLoggedIn)
+    console.log(goToPage)
 
 /******************************************************************************
 ASSIGNMENT 5
@@ -102,13 +115,17 @@ ASSIGNMENT 5
 Make a variable called userTitle and set the content equal to "Mr." if userMale 
 is true, or to "Mrs." if userMale is false. Use the TERNARY conditional to do 
 this:
-
+ 
 const variable = statement ? "this if true" : "this if not true"
 
 Try changing userMale to both true and false and console.log your new variable,
 to see that your conditional is working.
 ******************************************************************************/
 
-const userMale = false;
+const userMale = true;
 
-//your code here
+const userTitle = userMale ? "Mr." : "Mrs."
+
+console.log(userTitle)
+
+console.log(userMale)
